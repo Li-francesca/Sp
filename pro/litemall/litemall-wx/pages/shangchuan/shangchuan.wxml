@@ -1,0 +1,34 @@
+<view class="head" >
+    <view class='fabu'  bindtap="submit">发布</view>
+</view>
+
+<view class='piao'>
+    <view class='title'>商品名称：</view>
+    <input class='oinput'></input>
+</view>
+<view class='piao'>
+    <view class='title'>商品定价：</view>
+    <input class='oinput'></input>
+</view>
+<view class='piao'>
+    <view class='title'>商品类别：</view>
+    <input class='oinput'></input>
+</view>
+<view class='piao'>
+    <view class='title'>商品描述：</view>
+    <textarea class='otext'></textarea>   
+</view>
+
+
+
+
+<view class="image" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this"><!-- 图片预览 -->
+  <image src="{{item}}" data-index="{{index}}" bindtap="previewImg"></image>
+        <view class="deleteImage" data-index="{{index}}" catchtap="deleteImg"><!-- 图片删除 -->
+            <image src='../../../../../image/cha.png' class='cha'></image>
+        </view>
+</view>
+<view class='jiatupian'  bindtap="chooseImg" wx:if="{{plusShow}}" >
+  <image src='../../images/jia.png'></image>
+</view>
+
